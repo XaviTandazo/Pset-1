@@ -1,0 +1,471 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - ex_aisles
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_aisles
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_aisles
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ex_aisles
+  status: executed
+  type: data_exporter
+  upstream_blocks:
+  - load_aisles
+  uuid: ex_aisles
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - rename_columns_asiles
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: sf_load_aisles
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: sf_load_aisles
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - remove_rows_aisles
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: rename_columns_asiles
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - sf_load_aisles
+  uuid: rename_columns_asiles
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - remove_duplicates_aisles
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: remove_rows_aisles
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - rename_columns_asiles
+  uuid: remove_rows_aisles
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - capital_aisles
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: remove_duplicates_aisles
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - remove_rows_aisles
+  uuid: remove_duplicates_aisles
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - sf_export_aisles
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: capital_aisles
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - remove_duplicates_aisles
+  uuid: capital_aisles
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: sf_export_aisles
+  status: executed
+  type: data_exporter
+  upstream_blocks:
+  - capital_aisles
+  uuid: sf_export_aisles
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - ex_department
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_department
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_department
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ex_department
+  status: executed
+  type: data_exporter
+  upstream_blocks:
+  - load_department
+  uuid: ex_department
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - rename_columns_departments
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: sf_load_deparments
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: sf_load_deparments
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - remove_rows_departments
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: rename_columns_departments
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - sf_load_deparments
+  uuid: rename_columns_departments
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - remove_duplicates_departments
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: remove_rows_departments
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - rename_columns_departments
+  uuid: remove_rows_departments
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - capital_departments
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: remove_duplicates_departments
+  status: updated
+  type: transformer
+  upstream_blocks:
+  - remove_rows_departments
+  uuid: remove_duplicates_departments
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - sf_export_departments
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: capital_departments
+  status: updated
+  type: transformer
+  upstream_blocks:
+  - remove_duplicates_departments
+  uuid: capital_departments
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: sf_export_departments
+  status: executed
+  type: data_exporter
+  upstream_blocks:
+  - capital_departments
+  uuid: sf_export_departments
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - ex_products
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_products
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_products
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ex_products
+  status: executed
+  type: data_exporter
+  upstream_blocks:
+  - load_products
+  uuid: ex_products
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - rename_columns_products
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: sf_load_products
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: sf_load_products
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - remove_rows_products
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: rename_columns_products
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - sf_load_products
+  uuid: rename_columns_products
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - remove_duplicates_products
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: remove_rows_products
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - rename_columns_products
+  uuid: remove_rows_products
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - sf_export_products
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: remove_duplicates_products
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - remove_rows_products
+  uuid: remove_duplicates_products
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: sf_export_products
+  status: executed
+  type: data_exporter
+  upstream_blocks:
+  - remove_duplicates_products
+  uuid: sf_export_products
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - ex_order_products
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_order_products
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_order_products
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ex_order_products
+  status: executed
+  type: data_exporter
+  upstream_blocks:
+  - load_order_products
+  uuid: ex_order_products
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - ex_instacart_orders
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_instacart_orders
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_instacart_orders
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ex_instacart_orders
+  status: executed
+  type: data_exporter
+  upstream_blocks:
+  - load_instacart_orders
+  uuid: ex_instacart_orders
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - rename_columns_instacart_orders
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: sf_load_instacart_orders
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: sf_load_instacart_orders
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - remove_missing_rows
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: rename_columns_instacart_orders
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - sf_load_instacart_orders
+  uuid: rename_columns_instacart_orders
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - remove_duplicates_instacart_orders
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: remove_missing_rows
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - rename_columns_instacart_orders
+  uuid: remove_missing_rows
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - sf_export_instacart_orders
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: remove_duplicates_instacart_orders
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - remove_missing_rows
+  uuid: remove_duplicates_instacart_orders
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: sf_export_instacart_orders
+  status: failed
+  type: data_exporter
+  upstream_blocks:
+  - remove_duplicates_instacart_orders
+  uuid: sf_export_instacart_orders
+data_integration: null
+description: null
+extensions: {}
+name: empty morning
+type: python
+updated_at: '2025-02-15 01:05:10'
+uuid: empty_morning
+widgets: []
