@@ -1,0 +1,8 @@
+numpy
+pandas
+requests
+sqlalchemy
+yaml
+seaborn
+matplotlib
+snowflake

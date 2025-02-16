@@ -1,0 +1,12 @@
+INFORMACION DE ARCHIVOS.
+
+Ubicación:
+PSET1-datamining\scripts
+
+import_SQL.py
+
+El documento en cuestión permite importar la información de los archivos .csv en un esquema: "INSTACART_DB" de forma íntegra, sin asignar keys ni relaciones.
+
+Lo único para realizar esta tarea es cambiar las credenciales del MySQL y ejecutar. (Recuerda que debes cambiar tus credenciales en el archivo io_config.yaml que se encuentra: PSET1-datamining\tuberia-deber\io_config.yaml)
+
+Es necesario modificar también el directorio de este archivo en python ya que el directorio en el archivo.
